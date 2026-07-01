@@ -38,4 +38,5 @@ spec:
           - grafana.fourdragons.uk
         tls:
           - secretName: grafana-tls-secret
-            hosts: grafana.fourdragons.uk
+            hosts:
+              - grafana.fourdragons.uk
