@@ -28,7 +28,7 @@ spec:
                 name: linkding-secret
 
           securityContext:
-            allowPrivelageEscalation: false
+            allowPrivilegeEscalation: false
 
           volumeMounts:
             - name: linkding-data
