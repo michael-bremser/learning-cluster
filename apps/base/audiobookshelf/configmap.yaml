@@ -4,4 +4,4 @@ metadata:
   name: audiobookshelf-configmap
 data:
   TZ: America/Los_Angeles
-  port: "3005"
+  PORT: "3005"
