@@ -20,6 +20,33 @@ spec:
         name: audiobookshelf
         ports:
         - containerPort: 3005
+
         envFrom:
           - configMapRef:
               name: audiobookshelf-configmap
+
+        volumeMounts:
+          - name: audiobookshelf-data
+            mountPath: /config
+            subPath: config
+         
+          - name: audiobookshelf-data
+            mountPath: /metadata
+            subPath: metadata
+
+          - name: audiobookshelf-library
+            mountPath: /audiobooks
+            subPath: audiobooks
+
+          - name: audiobookshelf-library
+            mountPath: /podcasts
+            subPath: podcasts
+
+      volumes:
+        - name: audiobookshelf-data
+          persistentVolumeClaim:
+            claimName: audiobookshelf-data-pvc
+
+        - name: audiobookshelf-library
+          persistentVolumeClaim:
+            claimName: audiobookshelf-library-pvc
