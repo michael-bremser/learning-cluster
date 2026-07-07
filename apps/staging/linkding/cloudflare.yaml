@@ -80,7 +80,7 @@ data:
     - hostname: linkding.fourdragons.uk
       service: http://linkding:9090
 
-    - hostname: ads.fourdragons.uk
+    - hostname: abs.fourdragons.uk
       service: http://audiobookshelf:3005
   
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
