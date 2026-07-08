@@ -50,6 +50,8 @@ spec:
             mountPath: /podcasts
             subPath: podcasts
 
+      restartPolicy: Always
+
       volumes:
         - name: audiobookshelf-data
           persistentVolumeClaim:
